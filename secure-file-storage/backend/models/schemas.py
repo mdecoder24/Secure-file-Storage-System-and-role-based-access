@@ -15,6 +15,8 @@ class UserResponse(BaseModel):
     email: str
     role: str
 
+    model_config = {"from_attributes": True}
+
 class FileMetadata(BaseModel):
     file_id: uuid.UUID
     file_name: str
